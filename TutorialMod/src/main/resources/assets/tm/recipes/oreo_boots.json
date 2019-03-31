@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":[
+    		"   ",
+			"O O",
+			"O O"
+	],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "tm:oreo"
+        }
+    },
+    
+    "result":
+    {
+        "item": "tm:oreo_boots",
+        "count": 1
+    }
+}

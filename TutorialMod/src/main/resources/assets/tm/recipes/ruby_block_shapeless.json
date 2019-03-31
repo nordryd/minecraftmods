@@ -1,0 +1,23 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "tm:ruby"
+    },
+
+    {
+      "item": "minecraft:sugar",
+      "count": 3
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "tm:ruby_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+	[
+		"I I",
+		"DRD",
+		"I I"
+	],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "tm:ruby_block"
+        },
+        
+        "I":
+        {
+        	"item": "minecraft:iron_ingot"
+        },
+        
+        "D":
+        {
+        	"item": "minecraft:diamond"
+        }
+    },
+    
+    "result":
+    {
+        "item": "tm:ruby_block",
+        "count": 2
+    }
+}

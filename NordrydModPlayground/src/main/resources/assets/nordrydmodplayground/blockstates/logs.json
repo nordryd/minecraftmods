@@ -1,0 +1,23 @@
+{
+    "variants": {
+        "axis=x,variant=mint": { "model": "tm:logs_mint", "x":90, "y":90 },
+        "axis=y,variant=mint": { "model": "tm:logs_mint" },
+        "axis=z,variant=mint": { "model": "tm:logs_mint", "x":90 },
+        "axis=none,variant=mint": { "model": "tm:logs_mint" },
+        
+        "axis=x,variant=vanilla": { "model": "tm:logs_vanilla", "x":90, "y":90 },      
+        "axis=y,variant=vanilla": { "model": "tm:logs_vanilla" },    
+        "axis=z,variant=vanilla": { "model": "tm:logs_vanilla", "x":90 },
+        "axis=none,variant=vanilla": { "model": "tm:logs_vanilla" },
+        
+        "axis=x,variant=strawberry":{ "model": "tm:logs_strawberry", "x":90, "y":90 },
+        "axis=y,variant=strawberry":{ "model": "tm:logs_strawberry" },
+        "axis=z,variant=strawberry":{ "model": "tm:logs_strawberry", "x":90 },
+        "axis=none,variant=strawberry":{ "model": "tm:logs_strawberry" },
+        
+        "axis=x,variant=chocolate":{ "model": "tm:logs_chocolate", "x":90, "y":90 },
+        "axis=y,variant=chocolate":{ "model": "tm:logs_chocolate" },
+        "axis=z,variant=chocolate":{ "model": "tm:logs_chocolate", "x":90 },
+        "axis=none,variant=chocolate":{ "model": "tm:logs_chocolate" }
+    }
+}

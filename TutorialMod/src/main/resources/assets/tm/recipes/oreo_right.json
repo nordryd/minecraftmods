@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":[
+			"  O",
+			"  C",
+			"  O"
+	],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "tm:oreo_cookie"
+        },
+        "C":
+        {
+        	"item": "tm:creme"
+        }
+    },
+    
+    "result":
+    {
+        "item": "tm:oreo",
+        "count": 1
+    }
+}

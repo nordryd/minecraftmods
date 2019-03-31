@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "variant=vanilla": { "model": "tm:planks_vanilla" },
+        
+        "variant=mint": { "model": "tm:planks_mint" },
+        
+        "variant=strawberry": { "model": "tm:planks_strawberry" },
+        
+        "variant=chocolate": { "model": "tm:planks_chocolate" }
+    }
+}

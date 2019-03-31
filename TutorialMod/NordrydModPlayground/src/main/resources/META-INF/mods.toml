@@ -1,0 +1,46 @@
+modLoader="javafml"
+
+loaderVersion="[25,)"
+
+[[mods]] #mandatory
+
+# The modid of the mod
+modId="nordrydmodplayground" #mandatory
+
+# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
+version="0.1" #mandatory
+
+ # A display name for the mod
+displayName="Nordryd's Mod Playground" #mandatory
+
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="examplemod.png" #optional
+# A text field displayed in the mod UI
+credits="Thanks to my girlfriend Danie for being awesome, amazing, and for keeping me sane during college. Love you babe." #optional
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+This is my mod. There are many like it, but this one is mine.
+
+This mod is just my playground for modding. I do basically whatever I want here. This has been made public in case anybody wants to look and use this as an example, or offer constructive criticism.
+'''
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.nordrydmodplayground]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[25,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+    
+# Here's another dependency
+[[dependencies.nordrydmodplayground]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.13.2]"
+    ordering="NONE"
+    side="BOTH"

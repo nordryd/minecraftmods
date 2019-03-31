@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":[
+			" OO",
+			" SO",
+			" S "
+	],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "tm:oreo"
+        },
+        "S":
+        {
+        	"item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "tm:oreo_axe",
+        "count": 1
+    }
+}

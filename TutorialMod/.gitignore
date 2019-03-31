@@ -1,13 +1,6 @@
 # Compiled class file
 *.class
 
-# eclipse stuf
-/.gradle
-/.bat
-/.txt
-/.classpath
-/.properties
-
 # Log file
 *.log
 
@@ -28,13 +21,15 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/.metadata/
-/.recommenders/
+/.metadata
+/.recommenders
 
+# other
 .gradle/
 .settings/
 bin/
 build/
+eclipse/
 gradle/
+logs/
 run/
-

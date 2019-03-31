@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tm",
+  "name": "Ice Cream Mod",
+  "description": "I scream, you scream, we all scream because college f**ing sucks. But for real, I chose ice cream as the theme for my modding playground because so many kinds and perfect for practicing variation and generalization. This mod was made from many different kind of tutorials and then refactored to be more reusable (that's why there's rubies as well, cause the tutorial told me to do it). This is for my enrichment and to create a template for any other mods I wish to create. Or you wish to create :D",
+  "version": "1.0",
+  "mcversion": "1.13.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Nordryd"],
+  "credits": "Let's see: me... that's it.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

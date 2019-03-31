@@ -1,0 +1,7 @@
+{
+   "parent": "block/cube_column",
+   "textures": {
+       "end": "tm:blocks/oreo_block_top",
+       "side": "tm:blocks/oreo_block_sides"
+   }
+}
