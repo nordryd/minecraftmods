@@ -1,7 +1,0 @@
-{
-   "parent": "block/cube_column",
-   "textures": {
-       "end": "tm:blocks/logs_vanilla_top",
-       "side": "tm:blocks/logs_vanilla"
-   }
-}
