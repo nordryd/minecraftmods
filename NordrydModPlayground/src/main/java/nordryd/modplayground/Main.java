@@ -3,9 +3,8 @@ package nordryd.modplayground;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import nordryd.modplayground.lists.ModBlocks;
 import nordryd.modplayground.lists.ModItems;
 import nordryd.modplayground.util.Reference;
 
@@ -44,13 +44,25 @@ public class Main
 	{
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
-			event.getRegistry()
-					.registerAll(ModItems.start_item = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("start_item")));
+			for (Item modItem : ModItems.MOD_ITEMS) {
+				event.getRegistry().register(modItem);
+			}
+			
+			for(Item modBlockAsItem : ModItems.MOD_BLOCKS_AS_ITEMS) {
+				event.getRegistry().register(modBlockAsItem);
+			}
+			
 			logger.info("Items registerd");
 		}
 
-		private static ResourceLocation location(String name) {
-			return new ResourceLocation(Reference.MOD_ID, name);
+		@SubscribeEvent
+		public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+			for (Block modBlock : ModBlocks.MOD_BLOCKS) {
+				event.getRegistry().register(modBlock);
+			}
+			
+
+			logger.info("Blocks registerd");
 		}
 	}
 }
