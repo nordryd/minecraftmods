@@ -3,7 +3,6 @@ package nordryd.modplayground.itemGroups;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import nordryd.modplayground.init.ModItems;
 
 /**
  * <p>Item as icon: Item itself</p>
@@ -15,12 +14,15 @@ import nordryd.modplayground.init.ModItems;
  */
 public class ModItemGroup extends ItemGroup
 {
-	public ModItemGroup(String name) {
+	private final Item icon;
+	
+	public ModItemGroup(String name, Item icon) {
 		super(name);
+		this.icon = icon;
 	}
 	
 	@Override
 	public ItemStack createIcon() {
-		return new ItemStack(ModItems.start_item);
+		return new ItemStack(icon);
 	}
 }

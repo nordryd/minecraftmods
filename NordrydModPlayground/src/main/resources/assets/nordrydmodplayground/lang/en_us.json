@@ -1,8 +1,12 @@
 {
-	"item.nordrydmodplayground.start_item": "8====D",
+	"item.nordrydmodplayground.start_item": "Different Item",
+	"item.nordrydmodplayground.different_axe": "Different Axe",
+	"item.nordrydmodplayground.different_hoe": "Different Hoe",
+	"item.nordrydmodplayground.different_pickaxe": "Different Pickaxe",
+	"item.nordrydmodplayground.different_shovel": "Different Shovel",
+	"item.nordrydmodplayground.different_sword": "Different Sword",
 	
-	"block.nordrydmodplayground.start_block": "Justa Block",
+	"block.nordrydmodplayground.start_block": "Different Block",
 	
-	"itemGroup.playgroundItems": "Nordryd's Mod Playground (Items)",
-	"itemGroup.playgroundBlocks": "Nordryd's Mod Playground (Blocks)"
+	"itemGroup.playground": "Nordryd's Mod Playground"
 }
