@@ -1,5 +1,8 @@
 {
 	"item.nordrydmodplayground.start_item": "8====D",
 	
-	"block.nordrydmodplayground.start_block": "Justa Block"
+	"block.nordrydmodplayground.start_block": "Justa Block",
+	
+	"itemGroup.playgroundItems": "Nordryd's Mod Playground (Items)",
+	"itemGroup.playgroundBlocks": "Nordryd's Mod Playground (Blocks)"
 }

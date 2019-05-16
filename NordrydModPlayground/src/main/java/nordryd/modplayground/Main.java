@@ -24,7 +24,7 @@ public class Main
 
 	public Main() {
 		instance = this;
-
+		
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
 

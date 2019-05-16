@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import nordryd.modplayground.block.ModBlock;
 
 /**
@@ -29,5 +28,5 @@ public class ModBlocks
 
 	public static Block start_block = new ModBlock("start_block",
 			Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 5.0f).lightValue(10).sound(SoundType.SLIME),
-			new Item.Properties().group(ItemGroup.MISC));
+			new Item.Properties().group(ModItemGroups.playgroundBlocks));
 }

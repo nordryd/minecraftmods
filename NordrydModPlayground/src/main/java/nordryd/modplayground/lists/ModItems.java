@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import nordryd.modplayground.item.ModItem;
 
 /**
@@ -23,5 +22,5 @@ public class ModItems
 	public static final List<Item> MOD_ITEMS = new ArrayList<>();
 	public static final List<Item> MOD_BLOCKS_AS_ITEMS = new ArrayList<>();
 
-	public static ModItem start_item = new ModItem("start_item", new Item.Properties().group(ItemGroup.MISC));
+	public static ModItem start_item = new ModItem("start_item", new Item.Properties().group(ModItemGroups.playgroundItems));
 }
