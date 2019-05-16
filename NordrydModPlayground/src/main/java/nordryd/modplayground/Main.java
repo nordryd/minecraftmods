@@ -6,7 +6,9 @@ import org.apache.logging.log4j.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemSpade;
@@ -19,6 +21,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import nordryd.modplayground.init.ModArmorMaterial;
 import nordryd.modplayground.init.ModBlocks;
 import nordryd.modplayground.init.ModItemGroups;
 import nordryd.modplayground.init.ModItems;
@@ -59,16 +62,24 @@ public class Main
 					ModItems.start_item = new Item(new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("start_item")),
 					ModItems.start_block = new ItemBlock(ModBlocks.start_block, new Item.Properties().group(ModItemGroups.PLAYGROUND))
 							.setRegistryName(ModBlocks.start_block.getRegistryName()),
-					ModItems.different_axe = new ModItemAxe(ModToolMaterial.DIFFERENT, -1.0f, 6.0f, new Item.Properties().group(ModItemGroups.PLAYGROUND))
-							.setRegistryName(getLocation("different_axe")),
+					ModItems.different_axe = new ModItemAxe(ModToolMaterial.DIFFERENT, -1.0f, 6.0f,
+							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_axe")),
 					ModItems.different_hoe = new ItemHoe(ModToolMaterial.DIFFERENT, 6.0f, new Item.Properties().group(ModItemGroups.PLAYGROUND))
 							.setRegistryName(getLocation("different_hoe")),
 					ModItems.different_pickaxe = new ModItemPickaxe(ModToolMaterial.DIFFERENT, -2, 6.0f,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_pickaxe")),
 					ModItems.different_shovel = new ItemSpade(ModToolMaterial.DIFFERENT, -3.0f, 6.0f,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_shovel")),
-					ModItems.different_sword = new ItemSword(ModToolMaterial.DIFFERENT, 0, 6.0f, new Item.Properties().group(ModItemGroups.PLAYGROUND))
-							.setRegistryName(getLocation("different_sword")));
+					ModItems.different_sword = new ItemSword(ModToolMaterial.DIFFERENT, 0, 6.0f,
+							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_sword")),
+					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.HEAD,
+							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_helmet")),
+					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.CHEST,
+							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_chestpiece")),
+					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.LEGS,
+							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_leggings")),
+					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.FEET,
+							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_boots")));
 
 			logger.info("Items registerd");
 		}
