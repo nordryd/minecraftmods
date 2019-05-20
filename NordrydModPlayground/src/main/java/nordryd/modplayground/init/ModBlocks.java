@@ -17,5 +17,5 @@ import net.minecraft.block.Block;
  */
 public class ModBlocks
 {
-	public static Block start_block, different_ore, different_ore_nether;
+	public static Block different_block, different_ore, different_ore_nether;
 }

@@ -21,6 +21,6 @@ public class ModItemGroup extends ItemGroup
 	
 	@Override
 	public ItemStack createIcon() {
-		return new ItemStack(ModItems.start_item);
+		return new ItemStack(ModItems.different_item);
 	}
 }

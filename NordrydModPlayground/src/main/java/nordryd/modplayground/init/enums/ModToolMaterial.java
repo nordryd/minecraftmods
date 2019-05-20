@@ -14,7 +14,7 @@ import nordryd.modplayground.init.ModItems;
  */
 public enum ModToolMaterial implements IItemTier
 {
-	DIFFERENT(10.0f, 9.0f, 800, 3, 25, ModItems.start_item);
+	DIFFERENT(10.0f, 9.0f, 800, 3, 25, ModItems.different_item);
 
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;

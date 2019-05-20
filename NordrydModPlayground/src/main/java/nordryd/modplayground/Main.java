@@ -61,10 +61,10 @@ public class Main
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
 			event.getRegistry().registerAll(
-					ModItems.start_item = new Item(new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("start_item")),
+					ModItems.different_item = new Item(new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_item")),
 
-					ModItems.start_block = new ItemBlock(ModBlocks.start_block, new Item.Properties().group(ModItemGroups.PLAYGROUND))
-							.setRegistryName(ModBlocks.start_block.getRegistryName()),
+					ModItems.different_block = new ItemBlock(ModBlocks.different_block, new Item.Properties().group(ModItemGroups.PLAYGROUND))
+							.setRegistryName(ModBlocks.different_block.getRegistryName()),
 					ModItems.different_ore = new ItemBlock(ModBlocks.different_ore, new Item.Properties().group(ModItemGroups.PLAYGROUND))
 							.setRegistryName(ModBlocks.different_ore.getRegistryName()),
 					ModItems.different_ore_nether = new ItemBlock(ModBlocks.different_ore_nether,
@@ -89,15 +89,15 @@ public class Main
 					ModItems.different_boots = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.FEET,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_boots")));
 
-			logger.info("Items registerd");
+			logger.info("Items registered");
 		}
 
 		@SubscribeEvent
 		public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 			event.getRegistry().registerAll(
-					ModBlocks.start_block = new Block(
+					ModBlocks.different_block = new Block(
 							Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 5.0f).lightValue(10).sound(SoundType.SLIME))
-									.setRegistryName(getLocation("start_block")),
+									.setRegistryName(getLocation("different_block")),
 					ModBlocks.different_ore = new Block(
 							Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.SLIME))
 									.setRegistryName(getLocation("different_ore")),
@@ -105,7 +105,7 @@ public class Main
 							Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.SLIME))
 									.setRegistryName(getLocation("different_ore_nether")));
 
-			logger.info("Blocks registerd");
+			logger.info("Blocks registered");
 		}
 	}
 

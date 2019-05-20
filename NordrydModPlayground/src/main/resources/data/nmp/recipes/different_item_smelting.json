@@ -1,0 +1,10 @@
+{
+	"type": "minecraft:smelting",
+	
+	"ingredient": {"tag": "nmp:different_ore"},
+	
+	"result": "nmp:different_item",
+	"count": 1,
+	"experience": 2.3,
+	"cookingTime": 200
+}

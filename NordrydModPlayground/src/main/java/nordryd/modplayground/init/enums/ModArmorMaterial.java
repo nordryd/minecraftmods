@@ -15,7 +15,7 @@ import nordryd.modplayground.util.Reference;
  */
 public enum ModArmorMaterial implements IArmorMaterial
 {
-	DIFFERENT("different", 400, 25, ModItems.start_item, "block.slime_block.break", 0.0f, 8, 9, 10, 7);
+	DIFFERENT("different", 400, 25, ModItems.different_item, "block.slime_block.break", 0.0f, 8, 9, 10, 7);
 	
 	private static final int NUMBER_OF_DAMAGE_REDUCTION_AMOUNTS_NEEDED = 4;
 	private static final int[] MAX_DAMAGE_ARRAY = {13, 15, 16, 11};

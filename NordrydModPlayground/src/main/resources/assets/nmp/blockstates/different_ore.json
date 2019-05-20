@@ -1,0 +1,6 @@
+{
+    "variants": 
+    {
+        "": { "model": "nmp:block/different_ore" }
+    }
+}
