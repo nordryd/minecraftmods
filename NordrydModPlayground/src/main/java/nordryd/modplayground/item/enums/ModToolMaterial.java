@@ -1,4 +1,4 @@
-package nordryd.modplayground.init.enums;
+package nordryd.modplayground.item.enums;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
