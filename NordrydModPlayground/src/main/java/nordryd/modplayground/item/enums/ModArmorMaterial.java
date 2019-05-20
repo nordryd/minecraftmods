@@ -1,4 +1,4 @@
-package nordryd.modplayground.init.enums;
+package nordryd.modplayground.item.enums;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.IArmorMaterial;
