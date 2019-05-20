@@ -1,8 +1,9 @@
-package nordryd.modplayground.init;
+package nordryd.modplayground.init.enums;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
+import nordryd.modplayground.init.ModItems;
 
 /**
  * <p>

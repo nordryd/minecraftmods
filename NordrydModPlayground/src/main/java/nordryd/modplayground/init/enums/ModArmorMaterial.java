@@ -1,4 +1,4 @@
-package nordryd.modplayground.init;
+package nordryd.modplayground.init.enums;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.IArmorMaterial;
@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import nordryd.modplayground.init.ModItems;
 import nordryd.modplayground.util.Reference;
 
 /**
@@ -14,7 +15,7 @@ import nordryd.modplayground.util.Reference;
  */
 public enum ModArmorMaterial implements IArmorMaterial
 {
-	DIFFERENT("different", 400, 25, ModItems.start_item, "entity.ender_dragon.growl", 0.0f, 8, 10, 9, 7);
+	DIFFERENT("different", 400, 25, ModItems.start_item, "block.slime_block.break", 0.0f, 8, 9, 10, 7);
 	
 	private static final int NUMBER_OF_DAMAGE_REDUCTION_AMOUNTS_NEEDED = 4;
 	private static final int[] MAX_DAMAGE_ARRAY = {13, 15, 16, 11};

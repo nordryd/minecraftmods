@@ -21,14 +21,15 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import nordryd.modplayground.init.ModArmorMaterial;
 import nordryd.modplayground.init.ModBlocks;
 import nordryd.modplayground.init.ModItemGroups;
 import nordryd.modplayground.init.ModItems;
-import nordryd.modplayground.init.ModToolMaterial;
+import nordryd.modplayground.init.enums.ModArmorMaterial;
+import nordryd.modplayground.init.enums.ModToolMaterial;
 import nordryd.modplayground.item.tool.ModItemAxe;
 import nordryd.modplayground.item.tool.ModItemPickaxe;
 import nordryd.modplayground.util.Reference;
+import nordryd.modplayground.world.OreGenerator;
 
 @Mod(Reference.MOD_ID)
 public class Main
@@ -46,6 +47,7 @@ public class Main
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
+		OreGenerator.setupOreGenerator();
 		logger.info("setup() method registered");
 	}
 
@@ -60,8 +62,14 @@ public class Main
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
 			event.getRegistry().registerAll(
 					ModItems.start_item = new Item(new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("start_item")),
+
 					ModItems.start_block = new ItemBlock(ModBlocks.start_block, new Item.Properties().group(ModItemGroups.PLAYGROUND))
 							.setRegistryName(ModBlocks.start_block.getRegistryName()),
+					ModItems.different_ore = new ItemBlock(ModBlocks.different_ore, new Item.Properties().group(ModItemGroups.PLAYGROUND))
+							.setRegistryName(ModBlocks.different_ore.getRegistryName()),
+					ModItems.different_ore_nether = new ItemBlock(ModBlocks.different_ore_nether,
+							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(ModBlocks.different_ore_nether.getRegistryName()),
+
 					ModItems.different_axe = new ModItemAxe(ModToolMaterial.DIFFERENT, -1.0f, 6.0f,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_axe")),
 					ModItems.different_hoe = new ItemHoe(ModToolMaterial.DIFFERENT, 6.0f, new Item.Properties().group(ModItemGroups.PLAYGROUND))
@@ -74,11 +82,11 @@ public class Main
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_sword")),
 					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.HEAD,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_helmet")),
-					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.CHEST,
+					ModItems.different_chestpiece = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.CHEST,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_chestpiece")),
-					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.LEGS,
+					ModItems.different_leggings = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.LEGS,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_leggings")),
-					ModItems.different_helmet = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.FEET,
+					ModItems.different_boots = new ItemArmor(ModArmorMaterial.DIFFERENT, EntityEquipmentSlot.FEET,
 							new Item.Properties().group(ModItemGroups.PLAYGROUND)).setRegistryName(getLocation("different_boots")));
 
 			logger.info("Items registerd");
@@ -86,10 +94,16 @@ public class Main
 
 		@SubscribeEvent
 		public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-			event.getRegistry()
-					.registerAll(ModBlocks.start_block = new Block(
+			event.getRegistry().registerAll(
+					ModBlocks.start_block = new Block(
 							Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 5.0f).lightValue(10).sound(SoundType.SLIME))
-									.setRegistryName(getLocation("start_block")));
+									.setRegistryName(getLocation("start_block")),
+					ModBlocks.different_ore = new Block(
+							Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.SLIME))
+									.setRegistryName(getLocation("different_ore")),
+					ModBlocks.different_ore_nether = new Block(
+							Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.SLIME))
+									.setRegistryName(getLocation("different_ore_nether")));
 
 			logger.info("Blocks registerd");
 		}
