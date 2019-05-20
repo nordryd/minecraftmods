@@ -1,0 +1,19 @@
+{
+	"item.nmp.different_item": "Different Item",
+	"item.nmp.different_axe": "Different Axe",
+	"item.nmp.different_hoe": "Different Hoe",
+	"item.nmp.different_pickaxe": "Different Pickaxe",
+	"item.nmp.different_shovel": "Different Shovel",
+	"item.nmp.different_sword": "Different Sword",
+	
+	"item.nmp.different_helmet": "Different Helmet",
+	"item.nmp.different_chestpiece": "Different Chestpiece",
+	"item.nmp.different_leggings": "Different Leggings",
+	"item.nmp.different_boots": "Different Boots",
+	
+	"block.nmp.different_block": "Different Block",
+	"block.nmp.different_ore": "Different Ore",
+	"block.nmp.different_ore_nether": "Different Ore (Nether)",
+	
+	"itemGroup.playground": "Nordryd's Mod Playground"
+}

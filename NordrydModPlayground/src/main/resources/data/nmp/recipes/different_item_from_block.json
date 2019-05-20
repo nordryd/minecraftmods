@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  
+  "ingredients": [
+    {
+      "item": "nmp:different_block"
+    }
+  ],
+  
+  "result": {
+    "item": "nmp:different_item",
+    "count": 9
+  }
+}
