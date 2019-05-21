@@ -33,28 +33,23 @@ public class OreGenerator
 	// The lambda is basically putting an object inside the generic
 	private static final Predicate<IBlockState> IS_NETHERRACK = state -> state.getBlock() == Blocks.NETHERRACK;
 	private static final Predicate<IBlockState> IS_END_STONE = state -> state.getBlock() == Blocks.END_STONE;
-	
+
 	public static void setupOreGenerator() {
 		for (Biome biome : ForgeRegistries.BIOMES) {
 			// CountRangeConfig(chance to spawn (how many veins per chunk), min height, max
 			// height base (true max height), max height (relative to min height))
-			CountRangeConfig differentOrePlacement = new CountRangeConfig(1000, 20, 20, 100);
+			CountRangeConfig differentOrePlacement = new CountRangeConfig(10, 20, 20, 100);
 
 			// CompositeFeature<>(feature type, feature itself,
 			biome.addFeature(Decoration.UNDERGROUND_ORES,
-					new CompositeFeature<>(Feature.MINABLE, new MinableConfig(MinableConfig.IS_ROCK, ModBlocks.different_ore.getDefaultState(), 20),
+					new CompositeFeature<>(Feature.MINABLE, new MinableConfig(MinableConfig.IS_ROCK, ModBlocks.different_ore.getDefaultState(), 5),
 							new CountRange(), differentOrePlacement));
 
-
-			CountRangeConfig differentOreNetherPlacement = new CountRangeConfig(1000, 20, 0, 256);
+			CountRangeConfig differentOreNetherPlacement = new CountRangeConfig(10, 20, 0, 256);
 			biome.addFeature(Decoration.UNDERGROUND_ORES,
-					new DimensionalGenerator<>(Feature.MINABLE, 
-							new MinableConfig(IS_NETHERRACK, 
-									ModBlocks.different_ore_nether.getDefaultState(), 
-									20),
-							new CountRange(), 
-							differentOreNetherPlacement, 
-							DimensionType.NETHER));
+					new DimensionalGenerator<>(Feature.MINABLE,
+							new MinableConfig(IS_NETHERRACK, ModBlocks.different_ore_nether.getDefaultState(), 5), new CountRange(),
+							differentOreNetherPlacement, DimensionType.NETHER));
 		}
 	}
 }
