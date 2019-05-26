@@ -32,6 +32,8 @@ public class OreGenerator
 {
 	// The lambda is basically putting an object inside the generic
 	private static final Predicate<IBlockState> IS_NETHERRACK = state -> state.getBlock() == Blocks.NETHERRACK;
+	
+	@SuppressWarnings("unused") //remove later
 	private static final Predicate<IBlockState> IS_END_STONE = state -> state.getBlock() == Blocks.END_STONE;
 
 	public static void setupOreGenerator() {
