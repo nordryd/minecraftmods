@@ -31,6 +31,8 @@ public class Cage extends Feature<NoFeatureConfig>
 		try {
 			PrintWriter testFile = new PrintWriter("C:\\Users\\Nordryd\\Desktop\\wtf_is_happening.txt");
 			testFile.println("JAVA WAS HERE\nJAVA WAS HERE\nJAVA WAS HERE\nJAVA WAS HERE\nJAVA WAS HERE\nJAVA WAS HERE\nJAVA WAS HERE\nJAVA WAS HERE\n");
+			
+			testFile.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();

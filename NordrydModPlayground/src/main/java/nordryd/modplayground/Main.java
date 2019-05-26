@@ -1,13 +1,10 @@
 package nordryd.modplayground;
 
-import java.io.PrintWriter;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.world.gen.WorldGenRegion;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
